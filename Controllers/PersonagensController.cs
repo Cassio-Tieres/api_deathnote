@@ -21,7 +21,7 @@ namespace api_death_note.Controllers
         }
 
         // GET: api/Personagens
-        [HttpGet("api/personagens")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<Personagens>>> GetPersonagens()
         {
           if (_context.Personagens == null)
@@ -32,7 +32,7 @@ namespace api_death_note.Controllers
         }
 
         // GET: api/Personagens/5
-        [HttpGet("api/personagens/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Personagens>> GetPersonagens(long id)
         {
           if (_context.Personagens == null)
